@@ -5,7 +5,10 @@ layout: default
 <div class="posts">
   {% for post in site.posts %}
     <article class="post">
-
+    <div class="post-image">
+    	<a href="{{ site.baseurl }}{{ post.url}}"><img src="{{ site.baseurl }}/images/{{ post.title }} image.png"></a>
+    </div>
+    <div class="post-info">
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
       <div class="entry">
@@ -13,6 +16,7 @@ layout: default
       </div>
 
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+     </div>
     </article>
   {% endfor %}
 </div>
