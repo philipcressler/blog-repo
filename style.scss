@@ -37,7 +37,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $helveticaNeue;
-  color: $darkerGray;
+  color: $darkGray;
   font-weight: bold;
 
   line-height: 1.7;
@@ -228,8 +228,9 @@ img {
 
 nav {
   margin-top: 23px; // @TODO: Vertically middle align
-  font-family: DOS;
+  font-family: $pressStart;
   font-size: 18px;
+  line-height: 40px;
 
   @include tablet {
     float: none;
@@ -279,7 +280,8 @@ nav {
 
 .post {
   h1 {
-    font-family: DOS;
+    font-family: $pressStart;
+    font-size: 24px;
   }
 
   blockquote {
@@ -296,11 +298,12 @@ nav {
   }
 
   .entry {
+ 
     @include tablet {
       font-size: .75em;
     }
     @include mobile {
-      display:none;
+      //display:none;
     }
   }
 
@@ -337,6 +340,12 @@ nav > ul {
   li {
     list-style-type: none;
     display: inline;
+    a {
+      margin: 0px;
+    }
+  }
+  @include mobile {
+    float: none;
   }
 }
 
